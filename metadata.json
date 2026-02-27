@@ -1,0 +1,5 @@
+{
+  "name": "Analemma Calendar",
+  "description": "A visual tool to calculate and display the analemma for a given year and location.",
+  "requestFramePermissions": []
+}
