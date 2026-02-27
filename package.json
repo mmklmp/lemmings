@@ -8,7 +8,16 @@
     "build": "vite build",
     "preview": "vite preview",
     "clean": "rm -rf dist",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    // --- OpenClaw helpers --------------------------------------------------
+    // "openclaw:dev" will start the Vite dev server under OpenClaw's
+    // Tailscale gateway.  You can run it directly with
+    //   npx openclaw dev --gateway tailscale -- npm run dev
+    // or via the npm script below.
+    "openclaw:dev": "npx openclaw dev --gateway tailscale -- npm run dev",
+
+    // after building the static files, serve them through OpenClaw
+    "openclaw:serve": "npx openclaw serve dist --gateway tailscale"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
